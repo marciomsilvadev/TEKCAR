@@ -24,67 +24,46 @@ export const Structure = () => (
             </div>
 
             {/* Galeria Arquitetônica com Fotos Reais da Oficina TekCar */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-5 lg:gap-6" data-testid="structure-section-photo">
-                {/* Foto Principal de Destaque — Elevador Hidráulico e Box */}
-                <Reveal className="md:col-span-7" delay={0.05}>
-                    <div className="relative overflow-hidden rounded-lg border border-white/[0.12] bg-[#0F141C] h-full min-h-[340px] lg:min-h-[460px]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8" data-testid="structure-section-photo">
+                {/* Foto 1: Box de Elevação Hidráulica & Instalação Interna */}
+                <Reveal delay={0.05}>
+                    <div className="group relative overflow-hidden rounded-xl border border-white/[0.12] bg-[#0F141C] h-[380px] sm:h-[440px] lg:h-[480px]">
                         <img
                             src={OFFICE_PHOTOS.liftRedCar}
                             alt="Veículo no elevador hidráulico durante revisão na oficina TekCar"
                             loading="lazy"
-                            className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.02]"
+                            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                         />
                         <div
                             className="absolute inset-0 bg-gradient-to-t from-[#0A0D12]/90 via-transparent to-transparent pointer-events-none"
                             aria-hidden="true"
                         />
                         <div className="absolute bottom-4 left-5 right-5 flex items-center justify-between text-xs font-mono text-zinc-300">
-                            <span>BOX DE ELEVAÇÃO HIDRÁULICA</span>
-                            <span className="text-zinc-400">INSTALAÇÃO TEKCAR</span>
+                            <span className="font-semibold text-white">BOX DE ELEVAÇÃO HIDRÁULICA</span>
+                            <span className="text-zinc-400">INSTALAÇÃO INTERNA</span>
                         </div>
                     </div>
                 </Reveal>
 
-                {/* Coluna com Duas Fotografias Técnicas Reais */}
-                <div className="md:col-span-5 flex flex-col gap-5 lg:gap-6">
-                    {/* Foto 2: Manutenção e Compartimento do Motor */}
-                    <Reveal delay={0.1}>
-                        <div className="relative overflow-hidden rounded-lg border border-white/[0.12] bg-[#0F141C] h-[210px] lg:h-[220px]">
-                            <img
-                                src={OFFICE_PHOTOS.engineBay}
-                                alt="Inspeção técnica e componentes mecânicos de motor na TekCar"
-                                loading="lazy"
-                                className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.02]"
-                            />
-                            <div
-                                className="absolute inset-0 bg-gradient-to-t from-[#0A0D12]/80 via-transparent to-transparent pointer-events-none"
-                                aria-hidden="true"
-                            />
-                            <div className="absolute bottom-3 left-4 text-xs font-mono text-zinc-300">
-                                COMPONENTES & SISTEMA DE INJEÇÃO
-                            </div>
+                {/* Foto 2: Fachada Oficial e Recepção da Oficina (Ampliada) */}
+                <Reveal delay={0.1}>
+                    <div className="group relative overflow-hidden rounded-xl border border-white/[0.12] bg-[#0F141C] h-[380px] sm:h-[440px] lg:h-[480px]">
+                        <img
+                            src={OFFICE_PHOTOS.storefront}
+                            alt="Fachada e entrada da oficina mecânica TekCar na Av. Vicente Monteggia, 2211"
+                            loading="lazy"
+                            className="h-full w-full object-cover object-[center_35%] transition-transform duration-700 group-hover:scale-[1.03]"
+                        />
+                        <div
+                            className="absolute inset-0 bg-gradient-to-t from-[#0A0D12]/90 via-transparent to-transparent pointer-events-none"
+                            aria-hidden="true"
+                        />
+                        <div className="absolute bottom-4 left-5 right-5 flex items-center justify-between text-xs font-mono text-zinc-300">
+                            <span className="font-semibold text-white">FACHADA & ACESSO PRINCIPAL</span>
+                            <span className="text-zinc-400">AV. VICENTE MONTEGGIA, 2211</span>
                         </div>
-                    </Reveal>
-
-                    {/* Foto 3: Fachada e Recepção da Oficina */}
-                    <Reveal delay={0.15}>
-                        <div className="relative overflow-hidden rounded-lg border border-white/[0.12] bg-[#0F141C] h-[210px] lg:h-[220px]">
-                            <img
-                                src={OFFICE_PHOTOS.storefront}
-                                alt="Fachada e entrada da oficina mecânica TekCar na Av. Vicente Monteggia, 2211"
-                                loading="lazy"
-                                className="h-full w-full object-cover object-[center_38%] transition-transform duration-700 hover:scale-[1.02]"
-                            />
-                            <div
-                                className="absolute inset-0 bg-gradient-to-t from-[#0A0D12]/80 via-transparent to-transparent pointer-events-none"
-                                aria-hidden="true"
-                            />
-                            <div className="absolute bottom-3 left-4 text-xs font-mono text-zinc-300">
-                                FACHADA & ACESSO — AV. VICENTE MONTEGGIA, 2211
-                            </div>
-                        </div>
-                    </Reveal>
-                </div>
+                    </div>
+                </Reveal>
             </div>
 
             {/* Destaques Técnicos da Estrutura — Linha Minimalista */}

@@ -162,6 +162,7 @@ export const Location = () => (
                                 className="w-full flex-1 h-full min-h-[400px] border-0"
                                 data-testid="location-map-embed"
                                 allowFullScreen
+                                sandbox="allow-scripts allow-same-origin allow-popups"
                             />
                         </div>
                     </Reveal>

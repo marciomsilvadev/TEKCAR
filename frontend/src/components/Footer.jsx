@@ -3,6 +3,7 @@ import {
     ADDRESS,
     BRAND,
     CONTACT,
+    HOURS,
     LOGO_IMAGE_URL,
     NAV_LINKS,
     WA_DEFAULT,
@@ -10,99 +11,127 @@ import {
 } from '../data/site';
 
 export const Footer = () => {
-    const year = new Date().getFullYear();
+    const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="border-t border-white/[0.06] bg-ink-soft/50">
-            <div className="container-x grid gap-12 py-16 md:grid-cols-12">
-                <div className="md:col-span-5">
-                    {LOGO_IMAGE_URL ? (
-                        <img src={LOGO_IMAGE_URL} alt={BRAND.full} className="h-12 w-auto" data-testid="footer-logo-image" />
-                    ) : (
-                        <span className="font-display text-2xl font-bold tracking-[0.04em] text-white">
-                            TECK<span className="text-brand">CAR</span>
-                        </span>
-                    )}
-                    <p className="mt-4 max-w-xs text-[13.5px] leading-relaxed text-zinc-500">
-                        Oficina mecânica em Porto Alegre. Diagnóstico preciso, transparência e
-                        tecnologia para cuidar do seu veículo.
-                    </p>
-                    <div className="mt-6 flex gap-3">
-                        <a
-                            href={BRAND.instagram}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-testid="footer-instagram-link"
-                            aria-label={`Instagram ${BRAND.instagramHandle}`}
-                            className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/[0.09] text-zinc-400 transition-colors hover:border-white/30 hover:text-white"
-                        >
-                            <Instagram size={16} />
-                        </a>
-                        <a
-                            href={WA_DEFAULT}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-testid="footer-whatsapp-link"
-                            aria-label="WhatsApp da Teck Car"
-                            className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/[0.09] text-zinc-400 transition-colors hover:border-white/30 hover:text-white"
-                        >
-                            <MessageCircle size={16} />
-                        </a>
+        <footer className="bg-[#07090D] border-t border-white/[0.08]" aria-label="Rodapé do site">
+            <div className="container-x py-16 lg:py-20">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16">
+                    {/* Coluna 1: Marca, Resumo e Redes Sociais */}
+                    <div className="md:col-span-5">
+                        <div className="flex items-center">
+                            {LOGO_IMAGE_URL ? (
+                                <img
+                                    src={LOGO_IMAGE_URL}
+                                    alt={BRAND.full}
+                                    className="h-11 sm:h-12 w-auto object-contain"
+                                    data-testid="footer-logo-image"
+                                />
+                            ) : (
+                                <div className="flex flex-col leading-none">
+                                    <span className="font-display text-2xl font-bold tracking-[0.06em] text-white">
+                                        {BRAND.nameParts.main}<span className="text-[#E5252A]">{BRAND.nameParts.accent}</span>
+                                    </span>
+                                    <span className="mt-1 font-mono text-[9px] uppercase tracking-[0.3em] text-zinc-500">
+                                        Mecânica de Alta Precisão
+                                    </span>
+                                </div>
+                            )}
+                        </div>
+
+                        <p className="mt-5 max-w-sm text-sm leading-relaxed text-zinc-400">
+                            Oficina mecânica especializada em Porto Alegre. Diagnóstico computadorizado,
+                            revisão preventiva, freios e suspensão com total transparência e rigor técnico.
+                        </p>
+
+                        <div className="mt-6 flex items-center gap-3">
+                            <a
+                                href={BRAND.instagram}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-testid="footer-instagram-link"
+                                aria-label={`Perfil oficial no Instagram: ${BRAND.instagramHandle}`}
+                                className="flex h-10 w-10 items-center justify-center rounded border border-white/10 bg-white/[0.03] text-zinc-400 transition-colors hover:border-[#E5252A]/40 hover:text-white"
+                            >
+                                <Instagram size={17} aria-hidden="true" />
+                            </a>
+
+                            <a
+                                href={WA_DEFAULT}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-testid="footer-whatsapp-link"
+                                aria-label="Contato direto pelo WhatsApp da TekCar"
+                                className="flex h-10 w-10 items-center justify-center rounded border border-white/10 bg-white/[0.03] text-zinc-400 transition-colors hover:border-[#E5252A]/40 hover:text-white"
+                            >
+                                <MessageCircle size={17} aria-hidden="true" />
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Coluna 2: Navegação Rápida por Âncoras */}
+                    <div className="md:col-span-3">
+                        <p className="font-mono text-xs uppercase tracking-[0.22em] text-zinc-400 mb-5">
+                            Navegação
+                        </p>
+                        <ul className="space-y-3 text-sm text-zinc-400">
+                            {NAV_LINKS.map((link) => (
+                                <li key={link.href}>
+                                    <a
+                                        href={link.href}
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            scrollToId(link.href);
+                                        }}
+                                        data-testid={`footer-link-${link.href.replace('#', '')}`}
+                                        className="transition-colors hover:text-white"
+                                    >
+                                        {link.label}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Coluna 3: Endereço e Horários Oficiais */}
+                    <div className="md:col-span-4">
+                        <p className="font-mono text-xs uppercase tracking-[0.22em] text-zinc-400 mb-5">
+                            Localização & Contato
+                        </p>
+                        <div className="space-y-3.5 text-sm text-zinc-400">
+                            <div className="flex items-start gap-2.5">
+                                <MapPin size={16} className="text-[#E5252A] mt-0.5 shrink-0" aria-hidden="true" />
+                                <span>
+                                    {ADDRESS.street}
+                                    <br />
+                                    {ADDRESS.city} • CEP {ADDRESS.cep}
+                                </span>
+                            </div>
+
+                            <div className="flex items-center gap-2.5">
+                                <Phone size={15} className="text-[#E5252A] shrink-0" aria-hidden="true" />
+                                <a
+                                    href={`tel:${CONTACT.phoneRaw}`}
+                                    data-testid="footer-phone-link"
+                                    className="transition-colors hover:text-white font-medium"
+                                >
+                                    {CONTACT.phoneDisplay}
+                                </a>
+                            </div>
+
+                            <div className="mt-4 pt-4 border-t border-white/[0.06] text-xs space-y-1">
+                                <p className="font-mono text-zinc-400 uppercase tracking-wider">Atendimento:</p>
+                                <p className="text-zinc-400">Seg a Sex: {HOURS[0].time}</p>
+                                <p className="text-zinc-400">Sábado: {HOURS[1].time}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <nav className="md:col-span-3" aria-label="Links do rodapé">
-                    <p className="font-mono text-[10.5px] uppercase tracking-[0.24em] text-zinc-600">Navegação</p>
-                    <ul className="mt-5 space-y-3">
-                        {NAV_LINKS.map((l) => (
-                            <li key={l.href}>
-                                <a
-                                    href={l.href}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToId(l.href);
-                                    }}
-                                    data-testid={`footer-link-${l.href.replace('#', '')}`}
-                                    className="text-[13.5px] text-zinc-400 transition-colors hover:text-white"
-                                >
-                                    {l.label}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-
-                <div className="md:col-span-4">
-                    <p className="font-mono text-[10.5px] uppercase tracking-[0.24em] text-zinc-600">Contato</p>
-                    <ul className="mt-5 space-y-3.5 text-[13.5px] text-zinc-400">
-                        <li className="flex items-start gap-3">
-                            <MapPin size={14} className="mt-0.5 shrink-0 text-brand" />
-                            <span>
-                                {ADDRESS.street}
-                                <br />
-                                {ADDRESS.city}
-                            </span>
-                        </li>
-                        <li>
-                            <a href={`tel:${CONTACT.phoneRaw}`} data-testid="footer-phone-link" className="flex items-center gap-3 transition-colors hover:text-white">
-                                <Phone size={14} className="shrink-0 text-brand" />
-                                {CONTACT.phoneDisplay}
-                            </a>
-                        </li>
-                        <li>
-                            <a href={BRAND.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 transition-colors hover:text-white">
-                                <Instagram size={14} className="shrink-0 text-brand" />
-                                {BRAND.instagramHandle}
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div className="border-t border-white/[0.05]">
-                <div className="container-x flex flex-col items-center justify-between gap-3 py-6 text-[12px] text-zinc-600 sm:flex-row">
-                    <p>© {year} Teck Car — Oficina Mecânica. Todos os direitos reservados.</p>
-                    <p className="font-mono text-[10px] uppercase tracking-[0.2em]">Porto Alegre • RS</p>
+                {/* Linha Inferior com CNPJ e Copyright */}
+                <div className="mt-14 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400 font-mono">
+                    <p>© {currentYear} {BRAND.full}. CNPJ: {BRAND.cnpj}</p>
+                    <p>Porto Alegre — RS • Todos os direitos reservados.</p>
                 </div>
             </div>
         </footer>

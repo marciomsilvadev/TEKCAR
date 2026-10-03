@@ -27,8 +27,12 @@ next-env.d.ts
 
 # Production builds
 /build
+build/
 dist/
 dist
+
+# Root temporary stock media
+/*_medium.mp4
 
 # Environment files (comprehensive coverage)
 
@@ -81,8 +85,7 @@ memory/test_credentials.md
 # Mobile development
 android-sdk/
 
-# overlay black-box crash/user-report dumps — session data, never history
-**/.emergent/recordings/
+
 .env
 .env.*
 *.env

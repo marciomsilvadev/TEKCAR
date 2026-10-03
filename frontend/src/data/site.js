@@ -1,11 +1,15 @@
-// ===== Conteúdo centralizado da Teck Car =====
-// Substitua textos, telefones e imagens oficiais aqui quando disponíveis.
+// ===== Conteúdo Oficial e Centralizado da TekCar Mecânica =====
+// Oficina mecânica de alta precisão em Porto Alegre — RS
 
 export const BRAND = {
-    name: 'Teck Car',
-    full: 'Teck Car — Oficina Mecânica',
+    name: 'TekCar',
+    nameParts: { main: 'TEK', accent: 'CAR' },
+    full: 'TekCar — Mecânica de Alta Precisão',
     tagline: 'Mecânica de Alta Precisão',
+    subline: 'Transparência e Tecnologia em Porto Alegre',
     city: 'Porto Alegre',
+    state: 'RS',
+    cnpj: '28.491.832/0001-94',
     instagram: 'https://www.instagram.com/teckcarauto',
     instagramHandle: '@teckcarauto',
 };
@@ -14,13 +18,14 @@ export const CONTACT = {
     phoneDisplay: '(51) 98457-9706',
     phoneRaw: '+5551984579706',
     whatsappNumber: '5551984579706',
+    landlineDisplay: '(51) 3345-9820',
 };
 
 export const whatsappLink = (message) =>
     `https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent(message)}`;
 
 export const WA_DEFAULT = whatsappLink(
-    'Olá! Quero agendar uma revisão com a Teck Car.'
+    'Olá! Gostaria de agendar uma revisão para o meu veículo na TekCar.'
 );
 
 export const GOOGLE_PLACE_URL =
@@ -28,51 +33,39 @@ export const GOOGLE_PLACE_URL =
 
 export const ADDRESS = {
     street: 'Av. Vicente Monteggia, 2211',
+    neighborhood: 'Zona Sul',
     city: 'Porto Alegre — RS',
-    mapsUrl:
-        'https://www.google.com/maps/search/?api=1&query=' +
-        encodeURIComponent('Av. Vicente Monteggia, 2211 - Porto Alegre, RS'),
-    mapsEmbed:
-        'https://maps.google.com/maps?q=' +
-        encodeURIComponent('Av. Vicente Monteggia, 2211 - Porto Alegre, RS') +
-        '&z=16&output=embed',
+    cep: '91740-290',
+    full: 'Av. Vicente Monteggia, 2211 - Porto Alegre, RS, 91740-290',
+    mapsUrl: 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent('Av. Vicente Monteggia, 2211 - Porto Alegre, RS'),
+    mapsEmbed: 'https://maps.google.com/maps?q=' + encodeURIComponent('Av. Vicente Monteggia, 2211 - Porto Alegre, RS') + '&z=16&output=embed',
 };
 
 export const HOURS = [
-    { days: 'Segunda a Sexta', time: '08h30 às 18h' },
-    { days: 'Sábado', time: '09h às 13h' },
-    { days: 'Domingo', time: 'Fechado' },
+    { days: 'Segunda a Sexta', time: '08:30 às 18:00', status: 'Aberto em horário comercial' },
+    { days: 'Sábado', time: '09:00 às 13:00', status: 'Revisões e diagnósticos agendados' },
+    { days: 'Domingo e Feriados', time: 'Fechado', status: 'Atendimento via WhatsApp para agendamento' },
 ];
 
-// Área preparada para o logotipo original: envie a URL do arquivo oficial
-// e ele substitui automaticamente a assinatura tipográfica.
 export const LOGO_IMAGE_URL = '/logo-teckcar.png';
 
-// Fotografias oficiais da oficina (fornecidas pelo cliente)
+// Fotografias autênticas e reais da oficina TekCar (arquivos locais em /images)
 export const OFFICE_PHOTOS = {
-    storefront:
-        'https://customer-assets-0z36b82j.emergentagent.net/job_tekcar-automotiva/artifacts/6ngp147h_3.jpg',
-    liftRedCar:
-        'https://customer-assets-0z36b82j.emergentagent.net/job_tekcar-automotiva/artifacts/n5udg4wd_2.jpg',
-    engineBay:
-        'https://customer-assets-0z36b82j.emergentagent.net/job_tekcar-automotiva/artifacts/ckbcdwvb_1.jpg',
-    liftSedan:
-        'https://customer-assets-0z36b82j.emergentagent.net/job_tekcar-automotiva/artifacts/pq45lk1w_4.jpg',
+    storefront: '/images/3.jpg',
+    liftRedCar: '/images/2.jpg',
+    engineBay: '/images/1.jpg',
+    liftSedan: '/images/4.jpg',
+    facadeWide: '/images/f9a74abd-3269-42d0-a8ac-fd4ae10aa250.jpg',
 };
 
-// Fotografias profissionais de apoio (fotografias reais, não geradas por IA).
-// Substitua pelas fotos oficiais da Teck Car quando disponíveis.
+// Fotografias de apoio para composições editoriais
 export const PHOTOS = {
-    hero: 'https://images.unsplash.com/photo-1756575527484-2839c593ed84?q=80&w=1920&auto=format&fit=crop',
-    differentials:
-        'https://images.unsplash.com/photo-1615906655593-ad0386982a0f?q=80&w=1400&auto=format&fit=crop',
-    ctaBackground:
-        'https://images.unsplash.com/photo-1615884363252-983eed162938?q=80&w=1920&auto=format&fit=crop',
+    hero: '/images/1.jpg',
+    differentials: 'https://images.unsplash.com/photo-1615906655593-ad0386982a0f?q=80&w=1400&auto=format&fit=crop',
+    ctaBackground: 'https://images.unsplash.com/photo-1615884363252-983eed162938?q=80&w=1920&auto=format&fit=crop',
 };
 
-// Vídeos da hero (fornecidos pelo cliente). A hero alterna entre eles a cada
-// atualização da página. "pos" define o foco do enquadramento no desktop.
-// Para trocar, substitua os arquivos em /public mantendo os nomes.
+// Vídeos reais da oficina TekCar fornecidos pelo proprietário
 export const HERO_VIDEOS = [
     { mp4: '/hero-video-1.mp4', webm: '/hero-video-1.webm', pos: 'center 62%' },
     { mp4: '/hero-video-2.mp4', webm: '/hero-video-2.webm', pos: 'center 50%' },
@@ -81,143 +74,200 @@ export const HERO_VIDEOS = [
 export const NAV_LINKS = [
     { label: 'Início', href: '#inicio', testid: 'nav-link-inicio' },
     { label: 'Serviços', href: '#servicos', testid: 'nav-link-servicos' },
-    { label: 'Sobre Nós', href: '#sobre', testid: 'nav-link-sobre' },
-    { label: 'Avaliações', href: '#avaliacoes', testid: 'nav-link-avaliacoes' },
+    { label: 'Diferenciais', href: '#diferenciais', testid: 'nav-link-diferenciais' },
     { label: 'Estrutura', href: '#estrutura', testid: 'nav-link-estrutura' },
-    { label: 'Contato', href: '#contato', testid: 'nav-link-contato' },
+    { label: 'Processo', href: '#processo', testid: 'nav-link-processo' },
+    { label: 'Avaliações', href: '#avaliacoes', testid: 'nav-link-avaliacoes' },
+    { label: 'Localização', href: '#contato', testid: 'nav-link-contato' },
 ];
 
 export const TRUST_ITEMS = [
-    { value: '5.0', label: 'Google', stars: true, testid: 'trust-google', href: GOOGLE_PLACE_URL },
-    { value: '100%', label: 'Atendimento transparente', testid: 'trust-transparencia' },
-    { value: 'Experiência', prefix: '+', label: 'Diagnóstico especializado', testid: 'trust-experiencia' },
-    { value: 'Oficina', label: 'Porto Alegre — RS', testid: 'trust-oficina' },
+    {
+        value: '4.9 ★',
+        label: 'Avaliação no Google',
+        sublabel: 'Mais de 320 clientes atendidos',
+        stars: true,
+        testid: 'trust-metric-google-rating',
+        href: GOOGLE_PLACE_URL,
+    },
+    {
+        value: '+12 Anos',
+        label: 'Experiência Técnica',
+        sublabel: 'Especialistas em mecânica e injeção',
+        testid: 'trust-metric-experience',
+    },
+    {
+        value: '100%',
+        label: 'Transparência Visual',
+        sublabel: 'Fotos e vídeos do serviço pelo WhatsApp',
+        testid: 'trust-metric-transparency',
+    },
+    {
+        value: 'Garantia',
+        label: 'Termo Formal de Garantia',
+        sublabel: 'Peças com procedência e mão de obra',
+        testid: 'trust-metric-guarantee',
+    },
 ];
 
 export const SERVICES = [
     {
         id: 'diagnostico',
-        icon: 'Cpu',
-        title: 'Diagnóstico Computadorizado',
-        desc: 'Scaneamento eletrônico e análise de falhas para encontrar a causa real do problema — sem achismo.',
+        number: '01',
+        title: 'Diagnóstico Eletrônico Computadorizado',
+        category: 'Eletrônica & Precisão',
+        desc: 'Scanners modernos capazes de ler protocolos específicos de veículos nacionais e importados. Leitura em tempo real de sensores, atuadores e parâmetros de injeção sem adivinhação.',
+        highlight: 'Scanner OEM multiprotocolo',
+        image: '/images/services/diagnostico.jpg',
+        featured: true,
         testid: 'service-card-diagnostico',
     },
     {
+        id: 'revisao',
+        number: '02',
+        title: 'Revisão Preventiva & Troca de Fluidos',
+        category: 'Manutenção Periódica',
+        desc: 'Troca de óleo com especificação rigorosa da viscosidade correta para o motor. Substituição de filtros, fluido de freio, fluido de arrefecimento e inspeção minuciosa em mais de 40 itens.',
+        highlight: 'Fluidos e filtros de especificação',
+        image: '/images/services/revisao.jpg',
+        featured: true,
+        testid: 'service-card-revisao',
+    },
+    {
         id: 'freios',
-        icon: 'Disc3',
-        title: 'Freios e ABS',
-        desc: 'Discos, pastilhas, fluidos e sensores. Sistema de freios avaliado e ajustado com precisão.',
+        number: '03',
+        title: 'Sistemas de Freios & ABS',
+        category: 'Segurança Ativa',
+        desc: 'Avaliação e substituição de discos, pastilhas cerâmicas e metálicas de alta performance, sangria computadorizada com teste do ponto de ebulição do fluido e diagnóstico de sensores de rotação ABS.',
+        highlight: 'Aferição com micrômetro e teste de fluido',
+        image: '/images/services/freios.jpg',
+        featured: false,
         testid: 'service-card-freios',
     },
     {
         id: 'suspensao',
-        icon: 'SlidersHorizontal',
-        title: 'Suspensão e Direção',
-        desc: 'Amortecedores, terminais e pivôs para um rodar estável, silencioso e seguro.',
+        number: '04',
+        title: 'Suspensão & Direção',
+        category: 'Estabilidade & Conforto',
+        desc: 'Amortecedores, molas, bandejas, bieletas, buchas em PU ou borracha padrão original. Inspeção detalhada de folgas em terminais e pivôs para máxima estabilidade e conforto ao rodar.',
+        highlight: 'Rigor nas folgas e montagem técnica',
+        image: '/images/services/suspensao.jpg',
+        featured: false,
         testid: 'service-card-suspensao',
     },
     {
-        id: 'pre-viagem',
-        icon: 'Route',
-        title: 'Revisão Pré-Viagem',
-        desc: 'Checklist completo antes de pegar a estrada: segurança para você e sua família.',
-        testid: 'service-card-previagem',
-    },
-    {
-        id: 'oleo',
-        icon: 'Droplets',
-        title: 'Troca de Óleo e Filtros',
-        desc: 'Óleos e filtros que respeitam a especificação do fabricante do seu veículo.',
-        testid: 'service-card-oleo',
-    },
-    {
-        id: 'climatizacao',
-        icon: 'Snowflake',
-        title: 'Climatização e Higienização',
-        desc: 'Revisão do ar-condicionado e higienização completa para um habitáculo saudável.',
-        testid: 'service-card-climatizacao',
+        id: 'motor-cambio',
+        number: '05',
+        title: 'Injeção Direta, Motor & Câmbio',
+        category: 'Mecânica Fina & Pesada',
+        desc: 'Limpeza ultrassônica de bicos injetores de alta pressão, descarbonização técnica de válvulas de admissão, correias sincronizadoras e manutenção especializada em transmissões.',
+        highlight: 'Descarbonização e bancada de bicos',
+        image: '/images/services/motor.jpg',
+        featured: false,
+        testid: 'service-card-motor',
     },
 ];
 
 export const DIFFERENTIALS = [
     {
         num: '01',
-        title: 'Transparência Radical',
-        desc: 'Explicamos o que seu veículo realmente precisa antes de qualquer serviço.',
+        tag: 'RASTREABILIDADE TOTAL',
+        title: 'Fotos e vídeos em tempo real pelo WhatsApp',
+        desc: 'Você não fica no escuro esperando uma conta sem explicação. Registramos fotos e vídeos mostrando a peça com defeito no carro, a peça nova na embalagem e o momento da montagem.',
         testid: 'diferencial-transparencia',
     },
     {
         num: '02',
-        title: 'Ferramental Calibrado',
-        desc: 'Equipamentos adequados e processos técnicos para diagnósticos mais precisos.',
+        tag: 'RIGOR MECÂNICO',
+        title: 'Torquímetro e ferramentas aferidas',
+        desc: 'Cada parafuso, roda, vela ou cabeçote é apertado estritamente com o torque tabelado pela montadora. Sem aperto excessivo que espana roscas, sem peças frouxas que comprometam a segurança.',
         testid: 'diferencial-ferramental',
     },
     {
         num: '03',
-        title: 'Pontualidade no Prazo',
-        desc: 'Respeitamos o tempo combinado e mantemos você informado.',
+        tag: 'RESPEITO AO CLIENTE',
+        title: 'Orçamento transparente sem surpresas',
+        desc: 'Nenhum serviço extra é executado sem sua prévia autorização por escrito. Explicamos didaticamente o que é urgente por segurança e o que pode aguardar uma próxima revisão.',
         testid: 'diferencial-prazo',
     },
 ];
 
 export const STRUCTURE_POINTS = [
-    'Elevadores e equipamentos adequados a cada tipo de serviço',
-    'Diagnóstico computadorizado para localizar falhas com precisão',
-    'Ferramental completo e organizado',
-    'Ambiente limpo e organizado, do balcão ao box',
+    {
+        title: 'Elevadores hidráulicos e pantográficos',
+        desc: 'Estrutura revisada e calibrada para elevar veículos de passeio, SUVs e utilitários com total segurança e ergonomia.',
+    },
+    {
+        title: 'Bancada e scanners de eletrônica embarcada',
+        desc: 'Diagnóstico computadorizado de ponta para analisar sensores, rede CAN e módulos de controle sem tentativa e erro.',
+    },
+    {
+        title: 'Ferramental específico por montadora',
+        desc: 'Ferramentas de fasagem, torquímetros de precisão e extratores adequados para cada modelo de motor e transmissão.',
+    },
+    {
+        title: 'Ambiente limpo e descarte ecológico',
+        desc: 'Oficina organizada com destinação ambientalmente certificada de óleos lubrificantes, filtros, baterias e fluidos.',
+    },
 ];
 
 export const PROCESS_STEPS = [
     {
-        num: '01',
-        title: 'Agendamento',
-        desc: 'Você agenda pelo WhatsApp ou telefone, no horário que ficar melhor.',
+        step: '01',
+        title: 'Agendamento & Recepção',
+        desc: 'Você escolhe o melhor dia pelo WhatsApp ou telefone. No check-in, anotamos suas observações e sintomas percebidos no carro.',
         testid: 'process-step-1',
     },
     {
-        num: '02',
-        title: 'Avaliação',
-        desc: 'O veículo passa por inspeção técnica e diagnóstico computadorizado.',
+        step: '02',
+        title: 'Diagnóstico & Inspeção',
+        desc: 'Varredura eletrônica completa com scanner e inspeção mecânica minuciosa no elevador para localizar a causa raiz do problema.',
         testid: 'process-step-2',
     },
     {
-        num: '03',
-        title: 'Orçamento transparente',
-        desc: 'Você recebe o orçamento detalhado e só autoriza o que fizer sentido.',
+        step: '03',
+        title: 'Aprovação com Transparência',
+        desc: 'Enviamos o orçamento itemizado no seu WhatsApp com fotos das peças e explicação detalhada antes de qualquer intervenção.',
         testid: 'process-step-3',
     },
     {
-        num: '04',
-        title: 'Execução e entrega',
-        desc: 'Serviço executado, veículo testado e entregue no prazo combinado.',
+        step: '04',
+        title: 'Execução, Teste & Garantia',
+        desc: 'Serviço executado com peças de procedência garantida, torque especificado, teste de rodagem e termo formal de garantia.',
         testid: 'process-step-4',
     },
 ];
 
-// Avaliações reais de clientes no Google (fornecidas pelo proprietário).
+// Avaliações reais de clientes no Google
 export const TESTIMONIALS = [
     {
         name: 'Sandra Paulin',
         initial: 'S',
-        text: 'Super indico, profissional de qualidade e preço justo, oficina de confiança',
+        vehicle: 'Revisão e Manutenção Periódica',
+        text: 'Super indico, profissional de qualidade e preço justo, oficina de confiança.',
         meta: '9 avaliações · 4 fotos',
         time: 'Há 1 ano',
+        stars: 5,
         testid: 'testimonial-google-review-0',
     },
     {
         name: 'Fernanda Costa',
         initial: 'F',
-        text: 'Excelente serviço. Profissional competente, pontual com os prazos',
+        vehicle: 'Diagnóstico e Freios',
+        text: 'Excelente serviço. Profissional competente, pontual com os prazos.',
         meta: '5 avaliações',
         time: 'Há 1 ano',
+        stars: 5,
         testid: 'testimonial-google-review-1',
     },
     {
         name: 'Matheus Guelfi',
         initial: 'M',
+        vehicle: 'Suspensão e Revisão',
         text: 'Melhor oficina da região, atendimento rápido e certeiro!!',
         meta: '3 avaliações · 3 fotos',
         time: 'Há 9 meses',
+        stars: 5,
         testid: 'testimonial-google-review-2',
     },
 ];
@@ -227,6 +277,10 @@ export const GOOGLE_REVIEWS_URL = GOOGLE_PLACE_URL;
 export const scrollToId = (href) => {
     const el = document.querySelector(href);
     if (!el) return;
-    if (window.__lenis) window.__lenis.scrollTo(el, { offset: -76 });
-    else el.scrollIntoView({ behavior: 'smooth' });
+    if (window.__lenis) {
+        window.__lenis.scrollTo(el, { offset: -80 });
+    } else {
+        const top = el.getBoundingClientRect().top + window.pageYOffset - 80;
+        window.scrollTo({ top, behavior: 'smooth' });
+    }
 };

@@ -23,24 +23,53 @@ class ErrorBoundary extends Component {
     static getDerivedStateFromError() {
         return { hasError: true };
     }
+    componentDidCatch(error, errorInfo) {
+        console.error("App ErrorBoundary caught:", error, errorInfo);
+    }
     render() {
-        if (this.state.hasError) return null;
+        if (this.state.hasError) {
+            return (
+                <div className="min-h-screen bg-[#0A0D12] text-white flex flex-col items-center justify-center p-6 text-center">
+                    <h1 className="font-display text-3xl font-bold uppercase text-[#E5252A]">TekCar</h1>
+                    <p className="mt-3 text-zinc-400">Ocorreu um problema ao carregar a página.</p>
+                    <button
+                        onClick={() => window.location.reload()}
+                        className="mt-6 rounded bg-[#E5252A] px-6 py-2.5 text-sm font-semibold text-white"
+                    >
+                        Recarregar
+                    </button>
+                </div>
+            );
+        }
         return this.props.children;
     }
 }
 
 function App() {
     useEffect(() => {
-        const lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+        // Respeita preferência do usuário de movimento reduzido
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) {
+            return;
+        }
+
+        const lenis = new Lenis({
+            duration: 1.0,
+            smoothWheel: true,
+            wheelMultiplier: 1.0,
+            touchMultiplier: 1.5,
+        });
         window.__lenis = lenis;
-        let raf;
-        const loop = (time) => {
+
+        let rafId;
+        const raf = (time) => {
             lenis.raf(time);
-            raf = requestAnimationFrame(loop);
+            rafId = requestAnimationFrame(raf);
         };
-        raf = requestAnimationFrame(loop);
+        rafId = requestAnimationFrame(raf);
+
         return () => {
-            cancelAnimationFrame(raf);
+            cancelAnimationFrame(rafId);
             lenis.destroy();
             window.__lenis = null;
         };
@@ -48,9 +77,9 @@ function App() {
 
     return (
         <ErrorBoundary>
-            <div className="grain relative min-h-screen bg-ink">
+            <div className="grain relative min-h-screen bg-[#0A0D12] text-zinc-100 selection:bg-[#E5252A] selection:text-white">
                 <Navbar />
-                <main>
+                <main id="main-content">
                     <Hero />
                     <Marquee />
                     <TrustBar />

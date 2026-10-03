@@ -4,77 +4,107 @@
 
 @layer base {
     :root {
-        --background: 220 20% 6%;
-        --foreground: 210 20% 96%;
-        --card: 218 24% 8%;
-        --card-foreground: 210 20% 96%;
-        --popover: 218 24% 8%;
-        --popover-foreground: 210 20% 96%;
+        --background: 222 25% 6%;
+        --foreground: 210 20% 98%;
+        --card: 220 22% 8%;
+        --card-foreground: 210 20% 98%;
+        --popover: 220 22% 8%;
+        --popover-foreground: 210 20% 98%;
         --primary: 358 78% 52%;
         --primary-foreground: 0 0% 100%;
-        --secondary: 218 20% 14%;
-        --secondary-foreground: 210 20% 96%;
-        --muted: 218 20% 14%;
-        --muted-foreground: 218 10% 64%;
-        --accent: 218 20% 14%;
-        --accent-foreground: 210 20% 96%;
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 220 15% 16%;
-        --input: 220 15% 16%;
+        --secondary: 220 20% 12%;
+        --secondary-foreground: 210 20% 98%;
+        --muted: 220 18% 14%;
+        --muted-foreground: 218 12% 64%;
+        --accent: 220 20% 12%;
+        --accent-foreground: 210 20% 98%;
+        --destructive: 358 78% 52%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 220 16% 16%;
+        --input: 220 16% 16%;
         --ring: 358 78% 52%;
-        --chart-1: 12 76% 61%;
-        --chart-2: 173 58% 39%;
-        --chart-3: 197 37% 24%;
-        --chart-4: 43 74% 66%;
-        --chart-5: 27 87% 67%;
-        --radius: 0.75rem;
+        --radius: 0.5rem;
     }
 
     html {
         scroll-behavior: auto;
+        color-scheme: dark;
     }
 
     body {
-        @apply bg-ink text-zinc-200 font-body antialiased;
+        background-color: #0A0D12;
+        color: #F3F4F6;
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         margin: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
     }
 
     ::selection {
-        background: #e5252a;
-        color: #fff;
+        background: #E5252A;
+        color: #FFFFFF;
     }
 
+    /* Custom titanium dark scrollbar */
     ::-webkit-scrollbar {
-        width: 10px;
+        width: 8px;
     }
     ::-webkit-scrollbar-track {
-        background: #0a0d12;
+        background: #0A0D12;
     }
     ::-webkit-scrollbar-thumb {
-        background: #262d36;
-        border-radius: 8px;
-        border: 2px solid #0a0d12;
+        background: #1F2733;
+        border-radius: 4px;
+        border: 2px solid #0A0D12;
     }
     ::-webkit-scrollbar-thumb:hover {
-        background: #3a424d;
+        background: #2E3A4B;
+    }
+
+    /* Keyboard accessibility focus outlines */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+        outline: 2px solid #E5252A;
+        outline-offset: 3px;
     }
 }
 
 @layer utilities {
     .container-x {
-        @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+        @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
     }
-    .hairline {
-        border-color: rgba(255, 255, 255, 0.07);
+
+    .border-hairline {
+        border-color: rgba(255, 255, 255, 0.08);
     }
+
+    .border-hairline-light {
+        border-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .bg-ink-primary {
+        background-color: #0A0D12;
+    }
+
+    .bg-ink-secondary {
+        background-color: #0F141C;
+    }
+
+    .bg-ink-elevated {
+        background-color: #141B24;
+    }
+
+    /* Subtle mechanical film grain */
     .grain::before {
         content: '';
         position: fixed;
         inset: 0;
-        z-index: 5;
+        z-index: 2;
         pointer-events: none;
-        opacity: 0.035;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        opacity: 0.025;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     }
 }

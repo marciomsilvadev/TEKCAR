@@ -32,7 +32,7 @@ export const Structure = () => (
                             src={OFFICE_PHOTOS.liftRedCar}
                             alt="Veículo no elevador hidráulico durante revisão na oficina TekCar"
                             loading="lazy"
-                            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                            className="h-full w-full object-cover object-[center_35%] transition-transform duration-700 group-hover:scale-[1.03]"
                         />
                         <div
                             className="absolute inset-0 bg-gradient-to-t from-[#0A0D12]/90 via-transparent to-transparent pointer-events-none"

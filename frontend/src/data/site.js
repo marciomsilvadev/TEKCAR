@@ -139,7 +139,7 @@ export const SERVICES = [
         title: 'Sistemas de Freios & ABS',
         category: 'Segurança Ativa',
         desc: 'Avaliação e substituição de discos, pastilhas cerâmicas e metálicas de alta performance, sangria computadorizada com teste do ponto de ebulição do fluido e diagnóstico de sensores de rotação ABS.',
-        highlight: 'Aferição com micrômetro e teste de fluido',
+        highlight: 'Inspeção técnica e teste de fluido',
         image: '/images/services/freios.jpg',
         featured: false,
         testid: 'service-card-freios',

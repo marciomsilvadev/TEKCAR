@@ -28,7 +28,7 @@ export const Testimonials = () => (
                         rel="noopener noreferrer"
                         data-testid="see-all-google-reviews"
                         className="group inline-flex items-center gap-2 text-sm font-semibold text-zinc-300 transition-colors hover:text-white"
-                        aria-label="Ver todas as mais de 320 avaliações no perfil do Google Maps"
+                        aria-label="Ver avaliações no perfil oficial do Google Maps"
                     >
                         <span>Ver todas as avaliações no Google</span>
                         <ArrowUpRight

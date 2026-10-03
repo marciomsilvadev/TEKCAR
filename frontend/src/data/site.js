@@ -83,9 +83,9 @@ export const NAV_LINKS = [
 
 export const TRUST_ITEMS = [
     {
-        value: '4.9 ★',
+        value: '5.0 ★',
         label: 'Avaliação no Google',
-        sublabel: 'Mais de 320 clientes atendidos',
+        sublabel: 'Nota máxima comprovada',
         stars: true,
         testid: 'trust-metric-google-rating',
         href: GOOGLE_PLACE_URL,

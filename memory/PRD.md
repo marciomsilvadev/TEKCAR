@@ -34,6 +34,9 @@ Reconstruir e elevar profissionalmente a landing page da TECK CAR (oficina mecâ
 - Verticais 9:16 convertidos para 720x1280 em MP4 (H.264) + WebM (VP9), sem áudio, ~1,5 MB e ~0,7 MB; object-position configurável por vídeo (`HERO_VIDEOS` em `site.js`); poster fotográfico de fallback.
 - Verificado: reprodução automática com som desligado, loop, alternância no refresh, sem overflow, desktop e mobile.
 
+## Link do Google (2026-10-03)
+- Perfil oficial do Google Maps (Teck Car Auto Service) aplicado em: botão "Ver todas as avaliações no Google" (depoimentos), bloco "5.0 Google" da faixa de confiança (agora clicável) e `hasMap` no JSON-LD.
+
 ## Backlog
 - P1: avaliações reais do Google (API Places ou manuais), confirmação de horários, logo oficial.
 - P2: página de serviço individual, formulário de agendamento com backend, fotos adicionais da oficina.

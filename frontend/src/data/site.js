@@ -23,6 +23,9 @@ export const WA_DEFAULT = whatsappLink(
     'Olá! Quero agendar uma revisão com a Teck Car.'
 );
 
+export const GOOGLE_PLACE_URL =
+    'https://www.google.com/maps/place/Teck+Car+Auto+Service/data=!4m2!3m1!1s0x0:0x259dcefe29b8c0f7?sa=X&ved=1t:2428&ictx=111';
+
 export const ADDRESS = {
     street: 'Av. Vicente Monteggia, 2211',
     city: 'Porto Alegre — RS',
@@ -85,7 +88,7 @@ export const NAV_LINKS = [
 ];
 
 export const TRUST_ITEMS = [
-    { value: '5.0', label: 'Google', stars: true, testid: 'trust-google' },
+    { value: '5.0', label: 'Google', stars: true, testid: 'trust-google', href: GOOGLE_PLACE_URL },
     { value: '100%', label: 'Atendimento transparente', testid: 'trust-transparencia' },
     { value: 'Experiência', prefix: '+', label: 'Diagnóstico especializado', testid: 'trust-experiencia' },
     { value: 'Oficina', label: 'Porto Alegre — RS', testid: 'trust-oficina' },
@@ -219,9 +222,7 @@ export const TESTIMONIALS = [
     },
 ];
 
-export const GOOGLE_REVIEWS_URL =
-    'https://www.google.com/maps/search/?api=1&query=' +
-    encodeURIComponent('Teck Car Oficina Mecânica Porto Alegre avaliações');
+export const GOOGLE_REVIEWS_URL = GOOGLE_PLACE_URL;
 
 export const scrollToId = (href) => {
     const el = document.querySelector(href);

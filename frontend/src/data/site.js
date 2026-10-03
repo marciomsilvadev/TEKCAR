@@ -51,11 +51,11 @@ export const LOGO_IMAGE_URL = '/logo-teckcar.png';
 
 // Fotografias autênticas e reais da oficina TekCar (arquivos locais em /images)
 export const OFFICE_PHOTOS = {
-    storefront: '/images/3.jpg',
+    storefront: '/images/fachada.jpg',
     liftRedCar: '/images/2.jpg',
     engineBay: '/images/1.jpg',
     liftSedan: '/images/4.jpg',
-    facadeWide: '/images/f9a74abd-3269-42d0-a8ac-fd4ae10aa250.jpg',
+    facadeWide: '/images/fachada.jpg',
 };
 
 // Fotografias de apoio para composições editoriais

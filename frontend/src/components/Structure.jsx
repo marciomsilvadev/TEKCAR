@@ -73,7 +73,7 @@ export const Structure = () => (
                                 src={OFFICE_PHOTOS.storefront}
                                 alt="Fachada e entrada da oficina mecânica TekCar na Av. Vicente Monteggia, 2211"
                                 loading="lazy"
-                                className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.02]"
+                                className="h-full w-full object-cover object-[center_38%] transition-transform duration-700 hover:scale-[1.02]"
                             />
                             <div
                                 className="absolute inset-0 bg-gradient-to-t from-[#0A0D12]/80 via-transparent to-transparent pointer-events-none"

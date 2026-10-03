@@ -11,7 +11,12 @@ const Wordmark = ({ onClick }) => (
         aria-label={`${BRAND.name} — início`}
     >
         {LOGO_IMAGE_URL ? (
-            <img src={LOGO_IMAGE_URL} alt={BRAND.full} className="h-9 w-auto" />
+            <img
+                src={LOGO_IMAGE_URL}
+                alt={BRAND.full}
+                className="h-10 w-auto sm:h-11"
+                data-testid="navbar-logo-image"
+            />
         ) : (
             <>
                 <span className="font-display text-[26px] font-bold tracking-[0.04em] text-white">

@@ -43,7 +43,7 @@ export const HOURS = [
 
 // Área preparada para o logotipo original: envie a URL do arquivo oficial
 // e ele substitui automaticamente a assinatura tipográfica.
-export const LOGO_IMAGE_URL = null;
+export const LOGO_IMAGE_URL = '/logo-teckcar.png';
 
 // Fotografias oficiais da oficina (fornecidas pelo cliente)
 export const OFFICE_PHOTOS = {

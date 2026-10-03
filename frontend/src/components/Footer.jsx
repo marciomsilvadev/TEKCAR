@@ -3,6 +3,7 @@ import {
     ADDRESS,
     BRAND,
     CONTACT,
+    LOGO_IMAGE_URL,
     NAV_LINKS,
     WA_DEFAULT,
     scrollToId,
@@ -15,9 +16,13 @@ export const Footer = () => {
         <footer className="border-t border-white/[0.06] bg-ink-soft/50">
             <div className="container-x grid gap-12 py-16 md:grid-cols-12">
                 <div className="md:col-span-5">
-                    <span className="font-display text-2xl font-bold tracking-[0.04em] text-white">
-                        TECK<span className="text-brand">CAR</span>
-                    </span>
+                    {LOGO_IMAGE_URL ? (
+                        <img src={LOGO_IMAGE_URL} alt={BRAND.full} className="h-12 w-auto" data-testid="footer-logo-image" />
+                    ) : (
+                        <span className="font-display text-2xl font-bold tracking-[0.04em] text-white">
+                            TECK<span className="text-brand">CAR</span>
+                        </span>
+                    )}
                     <p className="mt-4 max-w-xs text-[13.5px] leading-relaxed text-zinc-500">
                         Oficina mecânica em Porto Alegre. Diagnóstico preciso, transparência e
                         tecnologia para cuidar do seu veículo.

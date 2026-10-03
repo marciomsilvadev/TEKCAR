@@ -22,8 +22,12 @@ Reconstruir e elevar profissionalmente a landing page da TECK CAR (oficina mecâ
 ## Placeholders a substituir pelo cliente
 - Depoimentos: 3 avaliações realistas de PLACEHOLDER (substituir pelas avaliações reais do Google em `site.js`).
 - Horários: Seg–Sex 08h30–18h, Sáb 09h–13h (confirmar com o cliente).
-- Logo: `LOGO_IMAGE_URL` em `site.js` recebe a URL do arquivo oficial quando disponível.
 - Fotos de apoio (hero, sobre, CTA) são de banco profissional — trocáveis por fotos oficiais da oficina.
+
+## Logo oficial (2026-10-03)
+- Arquivo original do cliente processado e hospedado em `public/logo-teckcar.png` (fundo preto tornado transparente, sem alterar a arte).
+- Em uso no header (desktop/mobile) e no rodapé via `LOGO_IMAGE_URL` em `site.js`.
+- Favicon `public/favicon.png` (512) e `apple-touch-icon.png` (180) gerados a partir do recorte do mascote (pistão); referenciados em `public/index.html`.
 
 ## Backlog
 - P1: avaliações reais do Google (API Places ou manuais), confirmação de horários, logo oficial.

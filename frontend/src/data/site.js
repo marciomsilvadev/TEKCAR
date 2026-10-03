@@ -9,9 +9,15 @@ export const BRAND = {
     subline: 'Transparência e Tecnologia em Porto Alegre',
     city: 'Porto Alegre',
     state: 'RS',
-    cnpj: '28.491.832/0001-94',
     instagram: 'https://www.instagram.com/teckcarauto',
     instagramHandle: '@teckcarauto',
+};
+
+export const PAYMENT_INFO = {
+    title: 'Facilidade de Pagamento',
+    installment: 'Parcelamos todos os serviços no cartão de crédito',
+    note: 'Juros conforme taxa da máquina',
+    fullText: 'Parcelamos todos os serviços no cartão de crédito (juros conforme taxa da máquina).',
 };
 
 export const CONTACT = {

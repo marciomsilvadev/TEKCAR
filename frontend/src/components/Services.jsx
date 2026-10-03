@@ -1,6 +1,7 @@
-import { ArrowUpRight } from 'lucide-react';
-import { SERVICES, whatsappLink } from '../data/site';
+import { ArrowUpRight, CreditCard } from 'lucide-react';
+import { PAYMENT_INFO, SERVICES, whatsappLink } from '../data/site';
 import { Eyebrow, Reveal } from './Reveal';
+import { PaymentFlags } from './PaymentFlags';
 
 export const Services = () => (
     <section id="servicos" className="py-24 lg:py-32 bg-[#0A0D12]" aria-label="Serviços mecânicos especializados">
@@ -92,6 +93,29 @@ export const Services = () => (
                     );
                 })}
             </div>
+
+            {/* Informação sobre Facilidade de Pagamento em Todos os Serviços */}
+            <Reveal delay={0.2} className="mt-10">
+                <div
+                    className="flex flex-col md:flex-row items-center justify-between gap-5 rounded-xl border border-white/[0.1] bg-[#0F141C] p-5 sm:px-7 transition-colors hover:border-white/[0.18]"
+                    data-testid="services-payment-info"
+                >
+                    <div className="flex items-center gap-4 text-center sm:text-left">
+                        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-[#E5252A]/30 bg-[#E5252A]/10 text-[#E5252A]">
+                            <CreditCard size={22} aria-hidden="true" />
+                        </span>
+                        <div>
+                            <p className="font-display text-base font-bold uppercase tracking-wide text-white">
+                                {PAYMENT_INFO.installment}
+                            </p>
+                            <p className="mt-0.5 text-xs text-zinc-400">
+                                Facilidade para você cuidar do seu carro: todos os serviços podem ser parcelados no cartão <span className="text-zinc-500">({PAYMENT_INFO.note})</span>.
+                            </p>
+                        </div>
+                    </div>
+                    <PaymentFlags className="shrink-0" />
+                </div>
+            </Reveal>
         </div>
     </section>
 );

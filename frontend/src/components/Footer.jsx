@@ -1,4 +1,4 @@
-import { Instagram, MapPin, MessageCircle, Phone } from 'lucide-react';
+import { CreditCard, Instagram, MapPin, MessageCircle, Phone } from 'lucide-react';
 import {
     ADDRESS,
     BRAND,
@@ -6,9 +6,11 @@ import {
     HOURS,
     LOGO_IMAGE_URL,
     NAV_LINKS,
+    PAYMENT_INFO,
     WA_DEFAULT,
     scrollToId,
 } from '../data/site';
+import { PaymentFlags } from './PaymentFlags';
 
 export const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -128,9 +130,33 @@ export const Footer = () => {
                     </div>
                 </div>
 
-                {/* Linha Inferior com CNPJ e Copyright */}
-                <div className="mt-14 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400 font-mono">
-                    <p>© {currentYear} {BRAND.full}. CNPJ: {BRAND.cnpj}</p>
+                {/* Meios de Pagamento & Parcelamento */}
+                <div
+                    className="mt-12 pt-8 border-t border-white/[0.08] flex flex-col md:flex-row items-center justify-between gap-6"
+                    data-testid="footer-payment-section"
+                >
+                    <div className="flex flex-col sm:flex-row items-center sm:items-start md:items-center gap-3 text-center sm:text-left">
+                        <div className="flex items-center gap-2">
+                            <span className="flex h-7 w-7 items-center justify-center rounded bg-white/[0.05] border border-white/10 text-[#E5252A]">
+                                <CreditCard size={15} aria-hidden="true" />
+                            </span>
+                            <span className="font-display text-sm uppercase tracking-wider font-bold text-white">
+                                Formas de Pagamento
+                            </span>
+                        </div>
+                        <span className="hidden sm:inline text-zinc-600">•</span>
+                        <p className="text-xs text-zinc-400">
+                            {PAYMENT_INFO.installment} <span className="text-zinc-500">({PAYMENT_INFO.note})</span>.
+                        </p>
+                    </div>
+
+                    {/* Bandeiras dos Principais Cartões */}
+                    <PaymentFlags />
+                </div>
+
+                {/* Linha Inferior com Copyright (Sem CNPJ) */}
+                <div className="mt-8 pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400 font-mono">
+                    <p>© {currentYear} {BRAND.full}</p>
                     <p>Porto Alegre — RS • Todos os direitos reservados.</p>
                 </div>
             </div>

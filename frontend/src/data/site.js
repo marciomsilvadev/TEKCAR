@@ -67,6 +67,14 @@ export const PHOTOS = {
         'https://images.unsplash.com/photo-1615884363252-983eed162938?q=80&w=1920&auto=format&fit=crop',
 };
 
+// Vídeos da hero (fornecidos pelo cliente). A hero alterna entre eles a cada
+// atualização da página. "pos" define o foco do enquadramento no desktop.
+// Para trocar, substitua os arquivos em /public mantendo os nomes.
+export const HERO_VIDEOS = [
+    { mp4: '/hero-video-1.mp4', webm: '/hero-video-1.webm', pos: 'center 62%' },
+    { mp4: '/hero-video-2.mp4', webm: '/hero-video-2.webm', pos: 'center 50%' },
+];
+
 export const NAV_LINKS = [
     { label: 'Início', href: '#inicio', testid: 'nav-link-inicio' },
     { label: 'Serviços', href: '#servicos', testid: 'nav-link-servicos' },
@@ -183,24 +191,30 @@ export const PROCESS_STEPS = [
     },
 ];
 
-// IMPORTANTE: textos de placeholder — substituir pelas avaliações reais do Google.
+// Avaliações reais de clientes no Google (fornecidas pelo proprietário).
 export const TESTIMONIALS = [
     {
-        name: 'Marcelo R.',
-        initial: 'M',
-        text: 'Transparência do início ao fim. Mostraram o problema, mandaram foto da peça e o carro ficou pronto no prazo combinado. Não troco a oficina por nada.',
+        name: 'Sandra Paulin',
+        initial: 'S',
+        text: 'Super indico, profissional de qualidade e preço justo, oficina de confiança',
+        meta: '9 avaliações · 4 fotos',
+        time: 'Há 1 ano',
         testid: 'testimonial-google-review-0',
     },
     {
-        name: 'Fernanda L.',
+        name: 'Fernanda Costa',
         initial: 'F',
-        text: 'Atendimento diferenciado. Explicaram tudo com clareza, sem enrolação e sem serviço desnecessário. Confiança total na equipe.',
+        text: 'Excelente serviço. Profissional competente, pontual com os prazos',
+        meta: '5 avaliações',
+        time: 'Há 1 ano',
         testid: 'testimonial-google-review-1',
     },
     {
-        name: 'Rodrigo M.',
-        initial: 'R',
-        text: 'Diagnóstico certeiro no meu carro, que outro lugar não tinha achado. Equipe técnica de verdade, equipamentos modernos e preço justo.',
+        name: 'Matheus Guelfi',
+        initial: 'M',
+        text: 'Melhor oficina da região, atendimento rápido e certeiro!!',
+        meta: '3 avaliações · 3 fotos',
+        time: 'Há 9 meses',
         testid: 'testimonial-google-review-2',
     },
 ];

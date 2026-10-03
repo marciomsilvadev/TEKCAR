@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 import { CalendarCheck, MessageCircle } from 'lucide-react';
-import { PHOTOS, WA_DEFAULT } from '../data/site';
+import { HERO_VIDEOS, PHOTOS, WA_DEFAULT } from '../data/site';
 
 const MaskedLine = ({ children, delay, className = '' }) => (
     <span className="block overflow-hidden pb-[0.08em] -mb-[0.08em]">
@@ -19,20 +20,48 @@ export const Hero = () => {
     const { scrollY } = useScroll();
     const bgY = useTransform(scrollY, [0, 900], [0, 160]);
     const fade = useTransform(scrollY, [0, 500], [1, 0.35]);
+    const videoRef = useRef(null);
+
+    // Alterna entre os vídeos da oficina a cada atualização da página
+    const [videoIdx] = useState(() => {
+        try {
+            return Number(sessionStorage.getItem('tcHeroVideo') || '0') % HERO_VIDEOS.length;
+        } catch {
+            return 0;
+        }
+    });
+    useEffect(() => {
+        try {
+            sessionStorage.setItem('tcHeroVideo', String((videoIdx + 1) % HERO_VIDEOS.length));
+        } catch {}
+    }, [videoIdx]);
+
+    useEffect(() => {
+        videoRef.current?.play?.().catch(() => {});
+    }, []);
 
     return (
         <section id="inicio" className="relative flex min-h-[100svh] items-end overflow-hidden" data-testid="hero-section">
-            <motion.div style={{ y: bgY }} className="absolute inset-0">
-                <motion.img
-                    src={PHOTOS.hero}
-                    alt="Mecânico trabalhando na oficina Teck Car"
-                    fetchPriority="high"
-                    className="h-[115%] w-full object-cover"
-                    initial={{ scale: 1.1, opacity: 0.4 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
-                />
-            </motion.div>
+        <motion.div style={{ y: bgY }} className="absolute inset-0">
+            <motion.video
+                ref={videoRef}
+                poster={PHOTOS.hero}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                data-testid="hero-background-video"
+                className="h-[115%] w-full object-cover"
+                style={{ objectPosition: HERO_VIDEOS[videoIdx].pos }}
+                initial={{ scale: 1.1, opacity: 0.4 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
+            >
+                <source src={HERO_VIDEOS[videoIdx].mp4} type="video/mp4" />
+                <source src={HERO_VIDEOS[videoIdx].webm} type="video/webm" />
+            </motion.video>
+        </motion.div>
             <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-ink/20" />
             <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/70" />
 

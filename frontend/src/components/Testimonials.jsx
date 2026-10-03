@@ -46,9 +46,12 @@ export const Testimonials = () => (
                                     {t.initial}
                                 </span>
                                 <span>
-                                    <span className="block text-[13.5px] font-medium text-white">{t.name}</span>
+                                    <span className="flex items-center gap-2 text-[13.5px] font-medium text-white">
+                                        {t.name}
+                                        <span className="text-[11px] font-normal text-zinc-600">· {t.time}</span>
+                                    </span>
                                     <span className="block font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-500">
-                                        Avaliação no Google
+                                        Avaliação no Google — {t.meta}
                                     </span>
                                 </span>
                             </figcaption>

@@ -33,7 +33,7 @@ export const FinalCta = () => (
 
                 <p className="mx-auto mt-5 max-w-xl text-[16px] leading-relaxed text-zinc-300">
                     Evite surpresas e gastos desnecessários na estrada. Agende uma revisão preventiva
-                    com os especialistas da TekCar e receba transparência total no seu WhatsApp.
+                    com os especialistas da TECK CAR e receba transparência total no seu WhatsApp.
                 </p>
 
                 <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3.5">

@@ -30,7 +30,7 @@ class ErrorBoundary extends Component {
         if (this.state.hasError) {
             return (
                 <div className="min-h-screen bg-[#0A0D12] text-white flex flex-col items-center justify-center p-6 text-center">
-                    <h1 className="font-display text-3xl font-bold uppercase text-[#E5252A]">TekCar</h1>
+                    <h1 className="font-display text-3xl font-bold uppercase text-[#E5252A]">TECK CAR</h1>
                     <p className="mt-3 text-zinc-400">Ocorreu um problema ao carregar a página.</p>
                     <button
                         onClick={() => window.location.reload()}

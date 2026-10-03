@@ -39,7 +39,7 @@ export const Hero = () => {
             id="inicio"
             className="relative flex min-h-[96svh] lg:min-h-[100svh] items-end overflow-hidden bg-[#0A0D12]"
             data-testid="hero-section"
-            aria-label="Abertura — TekCar Mecânica de Alta Precisão"
+            aria-label="Abertura — TECK CAR Mecânica de Alta Precisão"
         >
             {/* Background Video com tratamento cinematográfico atmosférico */}
             <motion.div
@@ -69,7 +69,7 @@ export const Hero = () => {
                 ) : (
                     <img
                         src={PHOTOS.hero}
-                        alt="Oficina TekCar"
+                        alt="Oficina TECK CAR"
                         className="h-full w-full object-cover"
                         style={{ filter: 'brightness(0.6) contrast(1.08) saturate(0.8)' }}
                     />
@@ -151,7 +151,7 @@ export const Hero = () => {
                         </a>
 
                         <a
-                            href={whatsappLink('Olá! Gostaria de tirar uma dúvida sobre manutenção na TekCar.')}
+                            href={whatsappLink('Olá! Gostaria de tirar uma dúvida sobre manutenção na TECK CAR.')}
                             target="_blank"
                             rel="noopener noreferrer"
                             data-testid="hero-whatsapp-button"

@@ -1,6 +1,6 @@
-# TekCar — Mecânica de Alta Precisão (Porto Alegre)
+# TECK CAR — Mecânica de Alta Precisão (Porto Alegre)
 
-Aplicação 100% Frontend (Static Site) desenvolvida com React, Tailwind CSS e Framer Motion para a oficina automotiva TekCar em Porto Alegre - RS.
+Aplicação 100% Frontend (Static Site) desenvolvida com React, Tailwind CSS e Framer Motion para a oficina automotiva TECK CAR em Porto Alegre - RS.
 
 ## 🚀 Publicação no Render (Static Site)
 

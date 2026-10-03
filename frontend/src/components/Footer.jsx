@@ -63,7 +63,7 @@ export const Footer = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 data-testid="footer-whatsapp-link"
-                                aria-label="Contato direto pelo WhatsApp da TekCar"
+                                aria-label="Contato direto pelo WhatsApp da TECK CAR"
                                 className="flex h-10 w-10 items-center justify-center rounded border border-white/10 bg-white/[0.03] text-zinc-400 transition-colors hover:border-[#E5252A]/40 hover:text-white"
                             >
                                 <MessageCircle size={17} aria-hidden="true" />

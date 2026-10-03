@@ -2,9 +2,9 @@
 // Oficina mecânica de alta precisão em Porto Alegre — RS
 
 export const BRAND = {
-    name: 'TekCar',
-    nameParts: { main: 'TEK', accent: 'CAR' },
-    full: 'TekCar — Mecânica de Alta Precisão',
+    name: 'TECK CAR',
+    nameParts: { main: 'TECK', accent: 'CAR' },
+    full: 'TECK CAR — Mecânica de Alta Precisão',
     tagline: 'Mecânica de Alta Precisão',
     subline: 'Transparência e Tecnologia em Porto Alegre',
     city: 'Porto Alegre',
@@ -31,7 +31,7 @@ export const whatsappLink = (message) =>
     `https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent(message)}`;
 
 export const WA_DEFAULT = whatsappLink(
-    'Olá! Gostaria de agendar uma revisão para o meu veículo na TekCar.'
+    'Olá! Gostaria de agendar uma revisão para o meu veículo na TECK CAR.'
 );
 
 export const GOOGLE_PLACE_URL =

@@ -5,7 +5,7 @@ export const Process = () => (
     <section
         id="processo"
         className="py-24 lg:py-32 bg-[#0F141C] border-t border-white/[0.08]"
-        aria-label="Processo de atendimento na TekCar"
+        aria-label="Processo de atendimento na TECK CAR"
     >
         <div className="container-x">
             {/* Header da Seção */}

@@ -78,7 +78,7 @@ export const Services = () => (
                             {/* Ação Direta para WhatsApp */}
                             <div className="mt-6 pt-4 border-t border-white/[0.06]">
                                 <a
-                                    href={whatsappLink(`Olá! Gostaria de consultar sobre o serviço de ${service.title} para o meu veículo na TekCar.`)}
+                                    href={whatsappLink(`Olá! Gostaria de consultar sobre o serviço de ${service.title} para o meu veículo na TECK CAR.`)}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     data-testid={`${service.testid}-link`}

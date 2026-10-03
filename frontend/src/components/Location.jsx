@@ -16,7 +16,7 @@ export const Location = () => (
                         <Reveal>
                             <Eyebrow>ONDE ESTAMOS</Eyebrow>
                             <h2 className="mt-4 font-display text-[clamp(2.2rem,4.5vw,3.75rem)] font-bold uppercase leading-[1.02] tracking-tight text-white">
-                                Venha conhecer <span className="text-[#E5252A]">a TekCar.</span>
+                                Venha conhecer <span className="text-[#E5252A]">a TECK CAR.</span>
                             </h2>
                             <p className="mt-4 text-[15.5px] leading-relaxed text-zinc-300">
                                 Fácil acesso na Zona Sul de Porto Alegre. Atendimento com hora marcada para
@@ -155,7 +155,7 @@ export const Location = () => (
 
                             {/* Mapa do Google Maps nítido, limpo e legível */}
                             <iframe
-                                title="Mapa da localização da oficina TekCar em Porto Alegre"
+                                title="Mapa da localização da oficina TECK CAR em Porto Alegre"
                                 src={ADDRESS.mapsEmbed}
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"

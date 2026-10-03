@@ -6,7 +6,7 @@ export const Differentials = () => (
     <section
         id="diferenciais"
         className="py-24 lg:py-32 bg-[#0F141C] border-t border-white/[0.08]"
-        aria-label="Diferenciais e transparência da TekCar"
+        aria-label="Diferenciais e transparência da TECK CAR"
         data-testid="differentials-section"
     >
         <div className="container-x">
@@ -16,7 +16,7 @@ export const Differentials = () => (
                     <Reveal>
                         <Eyebrow>DIFERENCIAIS DE OFICINA</Eyebrow>
                         <h2 className="mt-4 font-display text-[clamp(2.2rem,4.5vw,3.75rem)] font-bold uppercase leading-[1.02] tracking-tight text-white">
-                            Por que confiar seu carro <span className="text-[#E5252A]">à TekCar?</span>
+                            Por que confiar seu carro <span className="text-[#E5252A]">à TECK CAR?</span>
                         </h2>
                         <p className="mt-5 text-[15.5px] leading-relaxed text-zinc-300">
                             Construímos uma relação sólida através de fatos e transparência: você entende exatamente o que
@@ -68,7 +68,7 @@ export const Differentials = () => (
                                         <CheckCircle2 size={14} className="text-[#E5252A]" aria-hidden="true" />
                                         <span>Diagnóstico & Montagem Técnica</span>
                                     </span>
-                                    <span className="text-zinc-400">TekCar POA</span>
+                                    <span className="text-zinc-400">TECK CAR POA</span>
                                 </div>
                             </div>
 

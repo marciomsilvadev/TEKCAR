@@ -41,7 +41,7 @@ export const WhatsAppFloat = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="floating-whatsapp-trigger"
-                aria-label="Falar com a TekCar pelo WhatsApp"
+                aria-label="Falar com a TECK CAR pelo WhatsApp"
                 initial={{ opacity: 0, scale: 0.7 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1.2, duration: 0.4 }}

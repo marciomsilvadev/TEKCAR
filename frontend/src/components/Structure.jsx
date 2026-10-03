@@ -5,7 +5,7 @@ export const Structure = () => (
     <section
         id="estrutura"
         className="py-24 lg:py-32 bg-[#0A0D12] border-t border-white/[0.08]"
-        aria-label="Estrutura e instalações da oficina TekCar"
+        aria-label="Estrutura e instalações da oficina TECK CAR"
         data-testid="structure-section"
     >
         <div className="container-x">
@@ -30,7 +30,7 @@ export const Structure = () => (
                     <div className="group relative overflow-hidden rounded-xl border border-white/[0.12] bg-[#0F141C] h-[380px] sm:h-[440px] lg:h-[480px]">
                         <img
                             src={OFFICE_PHOTOS.liftRedCar}
-                            alt="Veículo no elevador hidráulico durante revisão na oficina TekCar"
+                            alt="Veículo no elevador hidráulico durante revisão na oficina TECK CAR"
                             loading="lazy"
                             className="h-full w-full object-cover object-[center_35%] transition-transform duration-700 group-hover:scale-[1.03]"
                         />
@@ -50,7 +50,7 @@ export const Structure = () => (
                     <div className="group relative overflow-hidden rounded-xl border border-white/[0.12] bg-[#0F141C] h-[380px] sm:h-[440px] lg:h-[480px]">
                         <img
                             src={OFFICE_PHOTOS.storefront}
-                            alt="Fachada e entrada da oficina mecânica TekCar na Av. Vicente Monteggia, 2211"
+                            alt="Fachada e entrada da oficina mecânica TECK CAR na Av. Vicente Monteggia, 2211"
                             loading="lazy"
                             className="h-full w-full object-cover object-[center_35%] transition-transform duration-700 group-hover:scale-[1.03]"
                         />

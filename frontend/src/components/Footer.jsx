@@ -154,10 +154,32 @@ export const Footer = () => {
                     <PaymentFlags />
                 </div>
 
-                {/* Linha Inferior com Copyright (Sem CNPJ) */}
-                <div className="mt-8 pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400 font-mono">
-                    <p>© {currentYear} {BRAND.full}</p>
-                    <p>Porto Alegre — RS • Todos os direitos reservados.</p>
+                {/* Linha Inferior com Copyright e Crédito de Desenvolvimento */}
+                <div className="mt-8 pt-6 border-t border-white/[0.06] flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-zinc-400">
+                    <p className="font-mono text-center md:text-left">
+                        © {currentYear} {BRAND.full} • Porto Alegre — RS • Todos os direitos reservados.
+                    </p>
+
+                    <div className="flex items-center gap-2">
+                        <span className="text-zinc-500 text-xs">Desenvolvido por</span>
+                        <a
+                            href="https://www.msdigital.digital"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group inline-flex items-center gap-2 px-2.5 py-1 rounded bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] hover:border-amber-400/40 transition-all duration-200"
+                            title="MS Digital - Criação de Sites e Soluções Digitais"
+                            data-testid="footer-developer-link"
+                        >
+                            <img
+                                src="/images/ms-digital-logo.png"
+                                alt="MS Digital"
+                                className="h-6 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                            />
+                            <span className="font-semibold text-zinc-300 group-hover:text-amber-400 transition-colors">
+                                MS Digital
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </footer>

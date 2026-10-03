@@ -1,0 +1,347 @@
+{
+  "project_meta": {
+    "brand_name": "TEK CAR Mecânica de Alta Precisão",
+    "location": "Porto Alegre, RS - Brasil",
+    "tone": "Senior, técnico, sóbrio, cirúrgico, confiável e editorial. Rejeição explícita a clichês de IA, badges excessivos, dashboards desnecessários e luzes neon.",
+    "theme": "Dark Theme Premium (Preto profundo com nuances de azul-marinho muito escuro, toques de cinza titânio e vermelho de precisão cirúrgica)."
+  },
+  "design_intent": {
+    "persona_and_craft": "E1 Senior Designer reconstruction. High-end automotive craft inspired by German engineering publications and editorial precision mechanics. Emphasizes visual continuum, generous white space (2-3x typical density), real workshop photography, and tactile typography.",
+    "avoid_patterns": [
+      "No neon glow borders or cheap CSS box-shadow explosions",
+      "No template cards with equal repetitive heights and boring icons inside colored circles",
+      "No dashboard analytics or fake tech graphs",
+      "No ALL-CAPS body or headings (UPPERCASE reserved strictly for tiny overlines/eyebrows with tracking-[0.2em])",
+      "No saturated red backgrounds for entire sections - red is used exclusively for primary CTAs, active states, and surgical focal accents"
+    ]
+  },
+  "colors": {
+    "background_primary": "#0A0D12",
+    "background_secondary": "#0F141C",
+    "background_elevated": "#141B24",
+    "background_header": "rgba(10, 13, 18, 0.85)",
+    "text_primary": "#F3F4F6",
+    "text_secondary": "#9CA3AF",
+    "text_muted": "#6B7280",
+    "accent_red": "#E5252A",
+    "accent_red_hover": "#C81E23",
+    "accent_red_muted": "rgba(229, 37, 42, 0.12)",
+    "metallic_border": "rgba(255, 255, 255, 0.08)",
+    "metallic_border_hover": "rgba(255, 255, 255, 0.2)",
+    "divider_line": "rgba(255, 255, 255, 0.06)",
+    "glass_blur": "backdrop-blur-md"
+  },
+  "typography": {
+    "fonts": {
+      "display_heading": "'Barlow Condensed', 'Outfit', -apple-system, sans-serif",
+      "body": "'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      "mono_label": "'JetBrains Mono', monospace"
+    },
+    "hierarchy": {
+      "eyebrow": "text-xs tracking-[0.22em] uppercase text-zinc-400 font-mono",
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.08]",
+      "h1_subline": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#E5252A] leading-tight mt-2",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-tight",
+      "h3": "text-xl sm:text-2xl font-bold text-white tracking-normal",
+      "body_lg": "text-lg text-zinc-300 leading-relaxed font-normal",
+      "body_base": "text-base text-zinc-400 leading-relaxed font-normal",
+      "body_sm": "text-sm text-zinc-400 leading-normal"
+    }
+  },
+  "layout_and_spacing": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "section_vertical_padding": "py-20 lg:py-28",
+    "section_rhythm": "Alternating narrative flow with breathing room: Hero (cinematic full-bleed with text) -> Trust Strip (refined continuous bar) -> Services (asymmetric spacious grid) -> Differentials (editorial 2-column image/story) -> Structure (large real equipment photo + precision points) -> Process (numbered 01-04 connected timeline) -> Google Reviews (clean authentic cards) -> Location & Workshop Hours (dark stylized coordinates + map + directions) -> Final Conversion Strip -> Minimal Footer",
+    "mobile_rules": "No desktop squeezing. Touch-friendly CTA buttons (min-height 48px), clean full-width stacked views, dedicated mobile slide-over nav, comfortable 16px body type."
+  },
+  "image_urls": {
+    "hero_cinematic_engine": {
+      "category": "Hero Background / Visual",
+      "url": "https://images.unsplash.com/photo-1606577924006-27d39b132ae2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHw0fHxjYXIlMjBlbmdpbmUlMjBkaWFnbm9zdGljJTIwbWVjaGFuaWN8ZW58MHx8fHwxNzkxMDAxOTA0fDA&ixlib=rb-4.1.0&q=85",
+      "description": "High-precision automotive engine bay with red highlight and illuminated components, conveying German/Audi precision mechanics"
+    },
+    "structure_facility_large": {
+      "category": "Estrutura / Tecnologia da Oficina",
+      "url": "https://images.unsplash.com/photo-1767681092416-bccf9410bda4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBhdXRvJTIwcmVwYWlyJTIwd29ya3Nob3B8ZW58MHx8fHwxNzkxMDAxOTA0fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Modern multi-bay automotive workshop with hydraulic lifts and organized service bays in pristine condition"
+    },
+    "diferenciais_craft": {
+      "category": "Diferenciais e Mão de Obra Qualificada",
+      "url": "https://images.unsplash.com/photo-1615906655593-ad0386982a0f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBjYXIlMjBtZWNoYW5pYyUyMHJlcGFpcnxlbnwwfHx8fDE3OTEwMDE5MDR8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Qualified technician with protective gloves conducting precision diagnostics and engine assembly"
+    },
+    "cta_background": {
+      "category": "Final Call-to-Action Backdrop",
+      "url": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBjYXIlMjBtZWNoYW5pYyUyMHJlcGFpcnxlbnwwfHx8fDE3OTEwMDE5MDR8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Hands with wrench on mechanical assembly, moody atmospheric dark lighting"
+    }
+  },
+  "navigation_and_header": {
+    "header_style": "Sticky z-50 bg-[#0A0D12]/85 backdrop-blur-md border-b border-white/[0.08] transition-all duration-300",
+    "logo": {
+      "text": "TEK CAR",
+      "subtitle": "ALTA PRECISÃO",
+      "accent": "Red dot indicator next to TEK CAR"
+    },
+    "links": [
+      { "label": "Início", "href": "#hero" },
+      { "label": "Serviços", "href": "#servicos" },
+      { "label": "Diferenciais", "href": "#diferenciais" },
+      { "label": "Estrutura", "href": "#estrutura" },
+      { "label": "Como Funciona", "href": "#processo" },
+      { "label": "Avaliações", "href": "#depoimentos" },
+      { "label": "Contato", "href": "#contato" }
+    ],
+    "contact_direct": "(51) 3345-9820",
+    "cta_label": "Agendar Revisão",
+    "mobile_menu": "Full-height sliding overlay with clear links and direct WhatsApp CTA button"
+  },
+  "sections_breakdown": {
+    "hero": {
+      "eyebrow": "OFICINA AUTOMOTIVA • PORTO ALEGRE",
+      "h1_line1": "Mecânica de Alta Precisão.",
+      "h1_line2_red": "Transparência e Tecnologia em Porto Alegre.",
+      "supporting_text": "Diagnóstico computadorizado de ponta, peças com procedência garantida e atendimento transparente. Seu veículo tratado com o rigor técnico que a engenharia moderna exige.",
+      "primary_cta": {
+        "text": "Agendar Revisão",
+        "action": "open_scheduling_modal_or_whatsapp",
+        "style": "bg-[#E5252A] text-white hover:bg-[#C81E23] px-7 py-3.5 rounded-md font-semibold transition shadow-sm"
+      },
+      "secondary_cta": {
+        "text": "Falar pelo WhatsApp",
+        "link": "https://wa.me/5551999999999",
+        "style": "bg-transparent text-white border border-white/20 hover:border-white/50 hover:bg-white/[0.04] px-7 py-3.5 rounded-md font-medium transition"
+      },
+      "indicators": [
+        "Equipamentos de Diagnóstico OEM",
+        "Garantia Total em Peças e Mão de Obra",
+        "Orçamento Claro sem Surpresas"
+      ]
+    },
+    "trust_strip": {
+      "presentation": "Continuous sleek horizontal strip without 4 boxy cards. Clean subtle divider lines.",
+      "items": [
+        { "number": "4.9 ★", "label": "Avaliação média no Google (Mais de 320 clientes)" },
+        { "number": "+12 Anos", "label": "De experiência técnica em Porto Alegre" },
+        { "number": "100%", "label": "Transparência: Fotos e vídeos do serviço pelo WhatsApp" },
+        { "number": "Garantia", "label": "Termo formal de garantia em todos os serviços executados" }
+      ]
+    },
+    "services": {
+      "title": "Serviços Especializados",
+      "subtitle": "Do diagnóstico eletrônico à mecânica pesada, cada procedimento segue o manual do fabricante.",
+      "items": [
+        {
+          "id": "diagnostico",
+          "title": "Diagnóstico Eletrônico Computadorizado",
+          "description": "Scanners avançados capazes de ler protocolos específicos de marcas nacionais e importadas para identificar anomalias sem 'achismos'.",
+          "icon": "Cpu"
+        },
+        {
+          "id": "revisao",
+          "title": "Revisão Preventiva & Manutenção",
+          "description": "Troca de óleo seguindo rigorosamente a viscosidade e homologação do motor, troca de filtros, fluidos e inspeção em 40 itens.",
+          "icon": "Wrench"
+        },
+        {
+          "id": "freios",
+          "title": "Sistemas de Freios & ABS",
+          "description": "Retífica ou troca de discos, pastilhas cerâmicas e metálicas de alta performance, sangria computadorizada e teste de fluido.",
+          "icon": "Disc"
+        },
+        {
+          "id": "suspensao",
+          "title": "Suspensão & Direção de Precisão",
+          "description": "Amortecedores, bandejas, buchas em PU ou borracha original e alinhamento tridimensional para máximo conforto e estabilidade.",
+          "icon": "ShieldCheck"
+        },
+        {
+          "id": "ar-condicionado",
+          "title": "Climatização & Ar-Condicionado",
+          "description": "Higienização com ozônio, teste de vazamento por contraste UV, recarga de gás ecológica e troca de filtro de cabine.",
+          "icon": "Wind"
+        },
+        {
+          "id": "motor-cambio",
+          "title": "Injeção Direta, Motor & Câmbio",
+          "description": "Descarbonização de válvulas, limpeza ultrassônica de bicos injetores e manutenção especializada em transmissões automáticas e manuais.",
+          "icon": "Settings"
+        }
+      ]
+    },
+    "diferenciais": {
+      "title": "Por que confiar seu carro à Tek Car?",
+      "subtitle": "O padrão que transformou a relação de motoristas exigentes com sua oficina em Porto Alegre.",
+      "narrative_points": [
+        {
+          "badge": "01. RASTREABILIDADE TOTAL",
+          "title": "Transparência visual em tempo real",
+          "description": "Você não fica no escuro. Enviamos fotos e vídeos no seu WhatsApp mostrando exatamente a peça danificada, a peça nova na caixa e o momento da instalação."
+        },
+        {
+          "badge": "02. RIGOR TÉCNICO",
+          "title": "Ferramentas aferidas e torquímetro",
+          "description": "Cada parafuso, roda ou cabeçote é apertado com o torque especificado pela montadora. Sem aperto excessivo, sem peças espanadas."
+        },
+        {
+          "badge": "03. RESPEITO AO SEU TEMPO",
+          "title": "Cronograma e orçamento cumpridos à risca",
+          "description": "Nenhum serviço extra é executado sem sua prévia autorização com orçamento detalhado. Previsão de entrega realista e pontual."
+        }
+      ]
+    },
+    "estrutura": {
+      "title": "Tecnologia para cuidar do seu carro.",
+      "subtitle": "Espaço organizado, limpo e preparado para veículos modernos e eletrônica embarcada.",
+      "highlights": [
+        "Elevadores pantográficos e de colunas calibrados periodicamente",
+        "Bancada de teste para sensores e bicos injetores de alta pressão",
+        "Área de espera com café, wi-fi e visualização da oficina",
+        "Descarte ecológico certificado de óleos, filtros e baterias"
+      ]
+    },
+    "processo": {
+      "title": "Como cuidamos do seu veículo",
+      "subtitle": "Um fluxo simples, transparente e sem burocracia do agendamento à entrega.",
+      "steps": [
+        {
+          "step": "01",
+          "title": "Agendamento e Check-in",
+          "desc": "Você escolhe o melhor horário. Ao chegar, realizamos o checklist inicial com você."
+        },
+        {
+          "step": "02",
+          "title": "Diagnóstico Preciso",
+          "desc": "Varredura eletrônica e inspeção física para localizar a causa exata do sintoma."
+        },
+        {
+          "step": "03",
+          "title": "Aprovação por WhatsApp",
+          "desc": "Enviamos o orçamento itemizado com fotos das peças antes de qualquer intervenção."
+        },
+        {
+          "step": "04",
+          "title": "Entrega Técnica & Garantia",
+          "desc": "Seu carro testado, limpo e entregue com certificado de garantia e histórico das peças."
+        }
+      ]
+    },
+    "depoimentos": {
+      "title": "O que dizem os motoristas de Porto Alegre",
+      "google_score": "4.9 de 5 estrelas no Google",
+      "total_reviews": "Baseado em mais de 320 avaliações verificadas",
+      "reviews": [
+        {
+          "name": "Marcelo D'Ávila",
+          "vehicle": "Volkswagen Jetta GLI",
+          "stars": 5,
+          "comment": "Oficina impecável. Me mandaram vídeos pelo WhatsApp mostrando a folga na bucha que outras duas oficinas não achavam. Orçamento justo e prazo cumprido. Recomendo de olhos fechados.",
+          "date": "Há 2 semanas",
+          "verified": "Avaliação verificada no Google"
+        },
+        {
+          "name": "Camila Silveira",
+          "vehicle": "Jeep Compass Longitude",
+          "stars": 5,
+          "comment": "Sensacional a transparência. Nenhum empurrômetro de peças. Me explicaram didaticamente o que precisava trocar agora e o que podia esperar a próxima revisão de 10.000 km.",
+          "date": "Há 1 mês",
+          "verified": "Avaliação verificada no Google"
+        },
+        {
+          "name": "Dr. Renato B. Fontoura",
+          "vehicle": "BMW 320i M Sport",
+          "stars": 5,
+          "comment": "Atendimento de padrão concessionária alemã por uma fração do custo. A equipe tem conhecimento profundo em eletrônica embarcada e scanner específico.",
+          "date": "Há 3 semanas",
+          "verified": "Avaliação verificada no Google"
+        }
+      ]
+    },
+    "localizacao": {
+      "title": "Localização e Contato",
+      "subtitle": "Fácil acesso pelas principais vias da Zona Norte de Porto Alegre.",
+      "address": "Av. Sertório, 4520 - Jardim São Pedro, Porto Alegre - RS, 91040-620",
+      "phone": "(51) 3345-9820",
+      "whatsapp": "(51) 99872-4410",
+      "hours": [
+        { "days": "Segunda a Sexta", "time": "08:00 às 12:00 e 13:30 às 18:00" },
+        { "days": "Sábado", "time": "08:00 às 12:00 (Revisões rápidas agendadas)" },
+        { "days": "Domingo e Feriados", "time": "Fechado" }
+      ],
+      "actions": {
+        "directions": "Como Chegar via Waze / Google Maps",
+        "whatsapp_button": "Falar no WhatsApp Agora"
+      }
+    },
+    "cta_final": {
+      "headline": "Seu carro merece um diagnóstico preciso.",
+      "subheadline": "Evite surpresas na estrada. Agende uma revisão preventiva com os especialistas da Tek Car.",
+      "button_primary": "Agendar Revisão pelo WhatsApp",
+      "button_secondary": "Ligar para a Oficina"
+    },
+    "footer": {
+      "company": "TEK CAR Mecânica Automotiva Especializada Ltda.",
+      "cnpj": "CNPJ: 28.491.832/0001-94",
+      "rights": "© 2026 Tek Car. Todos os direitos reservados. Porto Alegre - RS."
+    }
+  },
+  "interactive_features": [
+    {
+      "name": "Scheduling Modal (Agendar Revisão)",
+      "purpose": "Permitir ao cliente pré-agendar informando Marca, Modelo, Ano, Quilometragem aproximada e Sintoma ou Serviço desejado, gerando mensagem pré-formatada para WhatsApp ou confirmação imediata.",
+      "trigger_testid": "hero-schedule-revision-button"
+    },
+    {
+      "name": "Service Filter & Quick Details Drawer",
+      "purpose": "Permite abrir detalhes de cada serviço sem recarregar a página com especificações e garantias.",
+      "trigger_testid": "service-card-diagnostico"
+    },
+    {
+      "name": "Direct WhatsApp Floating Trigger",
+      "purpose": "Acesso rápido com badge discreto 'Online agora em Porto Alegre'.",
+      "trigger_testid": "floating-whatsapp-trigger"
+    }
+  ],
+  "accessibility_and_testing": {
+    "data_testids": [
+      "navbar-brand-logo",
+      "navbar-link-servicos",
+      "navbar-link-diferenciais",
+      "navbar-link-estrutura",
+      "navbar-link-depoimentos",
+      "navbar-link-contato",
+      "navbar-phone-action",
+      "navbar-cta-agendar",
+      "navbar-mobile-toggle",
+      "hero-eyebrow-tag",
+      "hero-main-title",
+      "hero-schedule-revision-button",
+      "hero-whatsapp-button",
+      "trust-metric-google-rating",
+      "trust-metric-experience",
+      "trust-metric-transparency",
+      "service-card-diagnostico",
+      "service-card-revisao",
+      "service-card-freios",
+      "differentials-section",
+      "structure-section-photo",
+      "process-step-1",
+      "process-step-4",
+      "testimonial-google-review-0",
+      "location-address-card",
+      "location-open-maps-button",
+      "location-whatsapp-contact-button",
+      "final-cta-agendar-button",
+      "booking-modal-container",
+      "booking-modal-submit-button"
+    ],
+    "wcag_aa_compliance": "High contrast ratio (> 5.5:1) for text against dark surfaces, large tap targets (minimum 44x44px), explicit focus rings and visible keyboard navigation."
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Strictly follow the dark titanium/deep navy palette (#0A0D12, #0F141C, #141B24). Never turn it into a standard flat generic grey.",
+    "Do NOT use repetitive equal-height generic SaaS cards. Emphasize asymmetry, generous spacing (p-8, py-20 to py-28) and real workshop photo presence.",
+    "The primary red (#E5252A) must be applied with surgical restraint: CTA buttons, small active indicators, key typography accent line in H1, and active states. DO NOT tint whole section backgrounds with red.",
+    "Ensure header uses translucent dark background (#0A0D12 with 85% opacity + backdrop-blur-md) with 1px delicate metallic border to prevent text collision when scrolling over page content.",
+    "Provide clear interactive elements with proper testids: modals for scheduling with vehicle inputs, direct WhatsApp links with pre-filled respectful messages in Portuguese, copy address feature, and working responsive navigation."
+  ]
+}
